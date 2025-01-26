@@ -1,37 +1,36 @@
-import Link from 'next/link';
+'use client';
+import Footer from '@/components/Footer';
+import Headder from '@/components/Headder';
+import { useEffect, useState } from 'react';
 
 export default function Home() {
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    /**
+     * Preloader
+     */
+    const preloader = document.querySelector('#preloader');
+    if (preloader) {
+      window.addEventListener('load', () => {
+        //  preloader.remove();
+        setIsClient(true);
+      });
+    }
+  }, []);
+
   return (
     <>
-      {/* <Breadcrumbs /> */}
-      <div>
-        <header className="bg-[#f9f9f9]">
-          <div className="flex justify-between items-center p-4 mx-auto max-w-7xl">
-            <div>
-              <h1 className="">Shop</h1>
-            </div>
-
-            <div>
-              <header>
-                <div>
-                  <div className="text-[#333] hover:text-[#666]">
-                    <a href="/signin">
-                      <button className="bg-black text-[#fff] px-2 py-1">
-                        Sign In
-                      </button>
-                    </a>
-                    <a href="/cart">
-                      <button className="bg-black text-[#fff] px-2 py-1">
-                        Cart
-                      </button>
-                    </a>
-                  </div>
-                </div>
-              </header>
-            </div>
-          </div>
-        </header>
-      </div>
+      {isClient ? (
+        <>
+          <Headder />
+          <Footer />
+        </>
+      ) : (
+        <>
+          <div id="preloader"></div>
+        </>
+      )}
     </>
   );
 }

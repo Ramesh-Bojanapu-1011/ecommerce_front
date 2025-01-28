@@ -68,7 +68,7 @@ const Headder = () => {
           </button>
           <div className=" navbar-collapse" id="navbarCollapse">
             <div className="navbar-nav ms-auto p-4 p-lg-0">
-              <a href="/index" className="nav-item nav-link active">
+              <a href="/" className="nav-item nav-link active">
                 Home
               </a>
               <a href="/about" className="nav-item nav-link">

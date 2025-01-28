@@ -13,24 +13,8 @@ import {
   faUser,
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import React, { useEffect, useState } from 'react';
-// import './Headder.css'; // Import the CSS file
 
 const Headder = () => {
-  // const [showSearch, setShowSearch] = useState(false);
-
-  // const [isOpen, setIsOpen] = useState(false);
-
-  // const toggleMenu = () => {
-  //   setIsOpen(!isOpen);
-  //   document.body.classList.toggle('open', !isOpen);
-  // };
-
-  // const closeMenu = () => {
-  //   setIsOpen(false);
-  //   document.body.classList.remove('open');
-  // };
-
   return (
     <>
       <div
@@ -84,39 +68,39 @@ const Headder = () => {
           </button>
           <div className=" navbar-collapse" id="navbarCollapse">
             <div className="navbar-nav ms-auto p-4 p-lg-0">
-              <a href="index.html" className="nav-item nav-link active">
+              <a href="/index" className="nav-item nav-link active">
                 Home
               </a>
-              <a href="about.html" className="nav-item nav-link">
+              <a href="/about" className="nav-item nav-link">
                 About Us
               </a>
-              <a href="product.html" className="nav-item nav-link">
+              <a href="/product" className="nav-item nav-link">
                 Products
               </a>
               <div className="nav-item dropdown">
                 <a
-                  href="#"
+                  href="/"
                   className="nav-link dropdown-toggle"
                   data-bs-toggle="dropdown"
                 >
                   Pages
                 </a>
                 <div className="dropdown-menu m-0">
-                  <a href="blog.html" className="dropdown-item">
+                  <a href="/blog" className="dropdown-item">
                     Blog Grid
                   </a>
-                  <a href="feature.html" className="dropdown-item">
+                  <a href="/feature" className="dropdown-item">
                     Our Features
                   </a>
-                  <a href="testimonial.html" className="dropdown-item">
+                  <a href="/testimonial" className="dropdown-item">
                     Testimonial
                   </a>
-                  <a href="404.html" className="dropdown-item">
+                  <a href="/404" className="dropdown-item">
                     404 Page
                   </a>
                 </div>
               </div>
-              <a href="contact.html" className="nav-item nav-link">
+              <a href="/contact" className="nav-item nav-link">
                 Contact Us
               </a>
             </div>
@@ -126,7 +110,7 @@ const Headder = () => {
                 href="/"
               >
                 <small className="fa fa-search text-body">
-                  <FontAwesomeIcon icon={faMagnifyingGlass} size={"2x"} />
+                  <FontAwesomeIcon icon={faMagnifyingGlass} size={'2x'} />
                 </small>
               </a>
               <a

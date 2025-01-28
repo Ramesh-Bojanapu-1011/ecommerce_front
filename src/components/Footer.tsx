@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Footer = () => {
-  return <div>Footer</div>;
+  return <div className='h-[100vh] flex justify-center items-center'>Footer</div>;
 };
 
 export default Footer;

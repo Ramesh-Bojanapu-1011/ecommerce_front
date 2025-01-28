@@ -1,81 +1,155 @@
-// 'use client';
-import React from 'react';
+'use client';
+import {
+  faFacebook,
+  faInstagram,
+  faLinkedin,
+  faTwitter,
+} from '@fortawesome/free-brands-svg-icons';
+import {
+  faBagShopping,
+  faEnvelope,
+  faMagnifyingGlass,
+  faMapMarkerAlt,
+  faUser,
+} from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import React, { useEffect, useState } from 'react';
+// import './Headder.css'; // Import the CSS file
 
 const Headder = () => {
+  // const [showSearch, setShowSearch] = useState(false);
+
+  // const [isOpen, setIsOpen] = useState(false);
+
+  // const toggleMenu = () => {
+  //   setIsOpen(!isOpen);
+  //   document.body.classList.toggle('open', !isOpen);
+  // };
+
+  // const closeMenu = () => {
+  //   setIsOpen(false);
+  //   document.body.classList.remove('open');
+  // };
+
   return (
-    <div>
-      <header className="bg-[#f9f9f9]">
-        <div className="flex  items-center space-x-7 px-4 py-1  mx-auto max-w-7xl">
-          <div>
-            <img src="/fkheaderlogo_plus-055f80.svg" alt="" />
+    <>
+      <div
+        className="container-fluid fixed-top px-0 wow fadeIn"
+        // data-wow-delay="0.1s"
+      >
+        <div className="top-bar row gx-0 align-items-center d-none d-lg-flex">
+          <div className="col-lg-6 px-5 text-start">
+            <small>
+              <FontAwesomeIcon icon={faMapMarkerAlt} />
+              123 Street, New York, USA
+            </small>
+            <small className="ms-4">
+              <FontAwesomeIcon icon={faEnvelope} />
+              info@example.com
+            </small>
           </div>
-
-          <div className="flex items-center border border-[#00000048] gap-2 rounded-[5px] p-2">
-            {/* Search icon */}
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="23"
-              height="23"
-              viewBox="0 0 24 24"
-            >
-              <rect width="24" height="24" fill="none" />
-              <path
-                fill="none"
-                stroke="currentColor"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeMiterlimit="10"
-                strokeWidth="1.5"
-                d="m21 21l-4-4m2-6a8 8 0 1 1-16 0a8 8 0 0 1 16 0"
-              />
-            </svg>
-            {/* End Search icon */}
-            <input
-              type="text"
-              className="border-collapse bg-transparent focus:outline-none w-[400px]"
-            />
-          </div>
-
-          <div>
-            <header>
-              <div>
-                <div className="text-[#333] gap-3 flex hover:text-[#666]">
-                  <a href="/signin">
-                    <button className="bg-black text-[#fff] px-2 py-1">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="64"
-                        height="64"
-                        viewBox="0 0 24 24"
-                      >
-                        <rect width="24" height="24" fill="none" />
-                        <g
-                          fill="currentColor"
-                          fillRule="evenodd"
-                          clipRule="evenodd"
-                        >
-                          <path d="M16 9a4 4 0 1 1-8 0a4 4 0 0 1 8 0m-2 0a2 2 0 1 1-4 0a2 2 0 0 1 4 0" />
-                          <path d="M12 1C5.925 1 1 5.925 1 12s4.925 11 11 11s11-4.925 11-11S18.075 1 12 1M3 12c0 2.09.713 4.014 1.908 5.542A8.99 8.99 0 0 1 12.065 14a8.98 8.98 0 0 1 7.092 3.458A9 9 0 1 0 3 12m9 9a8.96 8.96 0 0 1-5.672-2.012A6.99 6.99 0 0 1 12.065 16a6.99 6.99 0 0 1 5.689 2.92A8.96 8.96 0 0 1 12 21" />
-                        </g>
-                      </svg>
-                    </button>
-                  </a>
-
-                  <button className=" ">
-                    <a
-                      href="/cart"
-                      className="bg-black justify-center items-center text-[#fff] px-2 py-1 "
-                    >
-                      Cart
-                    </a>
-                  </button>
-                </div>
-              </div>
-            </header>
+          <div className="col-lg-6 px-5 text-end">
+            <small>Follow us:</small>
+            <a className="text-body ms-3" href="">
+              <FontAwesomeIcon icon={faFacebook} />
+            </a>
+            <a className="text-body ms-3" href="">
+              <FontAwesomeIcon icon={faTwitter} />
+            </a>
+            <a className="text-body ms-3" href="">
+              <FontAwesomeIcon icon={faLinkedin} />
+            </a>
+            <a className="text-body ms-3" href="">
+              <FontAwesomeIcon icon={faInstagram} />
+            </a>
           </div>
         </div>
-      </header>
-    </div>
+
+        <nav
+          className="navbar navbar-expand-lg navbar-light py-lg-0 px-lg-5 wow fadeIn"
+          data-wow-delay="0.1s"
+        >
+          <a href="/" className="navbar-brand ms-4 ms-lg-0">
+            <h1 className="fw-bold text-primary m-0">
+              F<span className="text-[#F65005]">oo</span>dy
+            </h1>
+          </a>
+          <button
+            type="button"
+            className="navbar-toggler me-4"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarCollapse"
+          >
+            <span className="navbar-toggler-icon"></span>
+          </button>
+          <div className=" navbar-collapse" id="navbarCollapse">
+            <div className="navbar-nav ms-auto p-4 p-lg-0">
+              <a href="index.html" className="nav-item nav-link active">
+                Home
+              </a>
+              <a href="about.html" className="nav-item nav-link">
+                About Us
+              </a>
+              <a href="product.html" className="nav-item nav-link">
+                Products
+              </a>
+              <div className="nav-item dropdown">
+                <a
+                  href="#"
+                  className="nav-link dropdown-toggle"
+                  data-bs-toggle="dropdown"
+                >
+                  Pages
+                </a>
+                <div className="dropdown-menu m-0">
+                  <a href="blog.html" className="dropdown-item">
+                    Blog Grid
+                  </a>
+                  <a href="feature.html" className="dropdown-item">
+                    Our Features
+                  </a>
+                  <a href="testimonial.html" className="dropdown-item">
+                    Testimonial
+                  </a>
+                  <a href="404.html" className="dropdown-item">
+                    404 Page
+                  </a>
+                </div>
+              </div>
+              <a href="contact.html" className="nav-item nav-link">
+                Contact Us
+              </a>
+            </div>
+            <div className="d-none d-lg-flex ms-2">
+              <a
+                className="btn-sm-square bg-white rounded-circle ms-3"
+                href="/"
+              >
+                <small className="fa fa-search text-body">
+                  <FontAwesomeIcon icon={faMagnifyingGlass} size={"2x"} />
+                </small>
+              </a>
+              <a
+                className="btn-sm-square bg-white rounded-circle ms-3"
+                href="/"
+              >
+                <small className="fa fa-user text-body">
+                  <FontAwesomeIcon icon={faUser} />
+                </small>
+              </a>
+              <a
+                className="btn-sm-square bg-white rounded-circle ms-3"
+                href="/"
+              >
+                <small className="fa fa-shopping-bag text-body">
+                  <FontAwesomeIcon icon={faBagShopping} />
+                </small>
+              </a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </>
   );
 };
 

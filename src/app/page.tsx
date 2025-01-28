@@ -5,8 +5,11 @@ export default function Home() {
   return (
     <>
       <div>
-        <Headder />
-        <Footer />
+        {/* <Headder /> */}
+        <div className="h-[100vh] justify-center items-center flex">
+          <p>main page</p>
+        </div>
+        {/* <Footer /> */}
       </div>
     </>
   );

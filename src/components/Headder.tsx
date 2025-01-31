@@ -7,131 +7,87 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 import {
   faBagShopping,
+  faBell,
+  faChevronDown,
   faEnvelope,
-  faMagnifyingGlass,
   faMapMarkerAlt,
+  faSearch,
   faUser,
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useEffect, useState } from 'react';
 
 const Headder = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      setIsScrolled(scrollPosition > 45); // 45px is the height of the top div
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
   return (
     <>
       <div
-        className="container-fluid fixed-top px-0 wow fadeIn"
-        // data-wow-delay="0.1s"
+        className={`mx-auto transition duratioon-500 max-sm:bg-[#424b40] max-sm:h-44  px-0 fixed top-0 right-0 left-0 z-[1030] ${isScrolled ? 'transform -translate-y-[45px]' : ''}`}
       >
-        <div className="top-bar row gx-0 align-items-center d-none d-lg-flex">
-          <div className="col-lg-6 px-5 text-start">
-            <small>
-              <FontAwesomeIcon icon={faMapMarkerAlt} />
+        <div className=" h-[45px] xl:border-b border-b-[rgba(42,36,36,0.07)] lg:flex hidden items-center  flex-wrap -mt-[0rem] -mr-[0.375rem] -ml-[0.375rem] fadeIn ">
+          <div className="lg:flex-none lg:w-1/2 px-[3rem] text-left max-w-full mt-0 ">
+            <small className="text-left">
+              <FontAwesomeIcon icon={faMapMarkerAlt} className="me-2" />
               123 Street, New York, USA
             </small>
             <small className="ms-4">
-              <FontAwesomeIcon icon={faEnvelope} />
+              <FontAwesomeIcon icon={faEnvelope} className="me-2" />
               info@example.com
             </small>
           </div>
-          <div className="col-lg-6 px-5 text-end">
+          <div className="lg:flex-none lg:w-1/2 px-5 text-end">
             <small>Follow us:</small>
-            <a className="text-body ms-3" href="">
+            <a className="text-[#555]  ms-3" href="/">
               <FontAwesomeIcon icon={faFacebook} />
             </a>
-            <a className="text-body ms-3" href="">
+            <a className="text-[#555]  ms-3" href="/">
               <FontAwesomeIcon icon={faTwitter} />
             </a>
-            <a className="text-body ms-3" href="">
+            <a className="text-[#555]  ms-3" href="/">
               <FontAwesomeIcon icon={faLinkedin} />
             </a>
-            <a className="text-body ms-3" href="">
+            <a className="text-[#555] ms-3" href="/">
               <FontAwesomeIcon icon={faInstagram} />
             </a>
           </div>
         </div>
-
-        <nav
-          className="navbar navbar-expand-lg navbar-light py-lg-0 px-lg-5 wow fadeIn"
-          data-wow-delay="0.1s"
-        >
-          <a href="/" className="navbar-brand ms-4 ms-lg-0">
-            <h1 className="fw-bold text-primary m-0">
-              F<span className="text-[#F65005]">oo</span>dy
-            </h1>
-          </a>
-          <button
-            type="button"
-            className="navbar-toggler me-4"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarCollapse"
-          >
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <div className=" navbar-collapse" id="navbarCollapse">
-            <div className="navbar-nav ms-auto p-4 p-lg-0">
-              <a href="/" className="nav-item nav-link active">
-                Home
-              </a>
-              <a href="/about" className="nav-item nav-link">
-                About Us
-              </a>
-              <a href="/product" className="nav-item nav-link">
-                Products
-              </a>
-              <div className="nav-item dropdown">
-                <a
-                  href="/"
-                  className="nav-link dropdown-toggle"
-                  data-bs-toggle="dropdown"
-                >
-                  Pages
-                </a>
-                <div className="dropdown-menu m-0">
-                  <a href="/blog" className="dropdown-item">
-                    Blog Grid
-                  </a>
-                  <a href="/feature" className="dropdown-item">
-                    Our Features
-                  </a>
-                  <a href="/testimonial" className="dropdown-item">
-                    Testimonial
-                  </a>
-                  <a href="/404" className="dropdown-item">
-                    404 Page
-                  </a>
-                </div>
+        <div>
+          <div className="flex  max-sm:flex-col  justify-between w-full overflow-auto p-4 lg:px-6">
+            <a className="text-[#555]  ms-3" href="/">
+              <h1 className="font-[700] text-[#3cb815]  text-[8vw] lg:text-[3vw] m-0">
+                F<span className="text-[#F65005]">oo</span>dy
+              </h1>
+            </a>
+            <div className="flex justify-center items-center">
+              <div className="bg-[#3cb815] text-white w-fit   rounded-xl flex-nowrap flex justify-center ml-7 items-center   py-2 px-4">
+                <FontAwesomeIcon icon={faSearch} className="me-2" />
+                <input
+                  type="text"
+                  className="bg-transparent focus:outline-none w-[40vw] max-sm:w-full   focus:bg-[#509018] bg-white pl-4 rounded-md"
+                />
               </div>
-              <a href="/contact" className="nav-item nav-link">
-                Contact Us
-              </a>
             </div>
-            <div className="d-none d-lg-flex ms-2">
-              <a
-                className="btn-sm-square bg-white rounded-circle ms-3"
-                href="/"
-              >
-                <small className="fa fa-search text-body">
-                  <FontAwesomeIcon icon={faMagnifyingGlass} size={'2x'} />
-                </small>
-              </a>
-              <a
-                className="btn-sm-square bg-white rounded-circle ms-3"
-                href="/"
-              >
-                <small className="fa fa-user text-body">
-                  <FontAwesomeIcon icon={faUser} />
-                </small>
-              </a>
-              <a
-                className="btn-sm-square bg-white rounded-circle ms-3"
-                href="/"
-              >
-                <small className="fa fa-shopping-bag text-body">
-                  <FontAwesomeIcon icon={faBagShopping} />
-                </small>
-              </a>
+
+            <div className="gap-2 sm:flex hidden items-center   ">
+              <button className="bg-[#3cb815] text-white  flex flex-row rounded-xl p-2   ">
+                <FontAwesomeIcon icon={faBell} className=" size-[20px] " />
+              </button>
+              <button className="bg-[#3cb815] text-white flex flex-row  rounded-xl  p-2  ">
+                <FontAwesomeIcon icon={faUser} className=" size-[20px] " />
+              </button>
             </div>
           </div>
-        </nav>
+        </div>
       </div>
     </>
   );

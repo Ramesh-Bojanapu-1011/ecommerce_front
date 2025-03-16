@@ -5,10 +5,7 @@ import Headder from '@/components/Headder';
 import { useEffect, useState } from 'react';
 import Footer from '@/components/Footer';
 
-const geistSans = Geist({
-  variable: '--font-geist-sans',
-  subsets: ['latin'],
-});
+const geistSans = Geist({ variable: '--font-geist-sans', subsets: ['latin'] });
 
 const geistMono = Geist_Mono({
   variable: '--font-geist-mono',
@@ -17,9 +14,7 @@ const geistMono = Geist_Mono({
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
   const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {

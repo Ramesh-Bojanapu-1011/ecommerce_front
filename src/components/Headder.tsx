@@ -1,20 +1,15 @@
 'use client';
 import {
-  faFacebook,
-  faInstagram,
-  faLinkedin,
-  faTwitter,
-} from '@fortawesome/free-brands-svg-icons';
-import {
-  faBagShopping,
-  faBell,
-  faChevronDown,
-  faEnvelope,
-  faMapMarkerAlt,
-  faSearch,
-  faUser,
-} from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+  Bell,
+  Facebook,
+  Instagram,
+  Linkedin,
+  Mail,
+  MapPin,
+  Search,
+  Twitter,
+  User,
+} from 'lucide-react';
 import { useEffect, useState } from 'react';
 
 const Headder = () => {
@@ -34,30 +29,30 @@ const Headder = () => {
       <div
         className={`mx-auto transition duratioon-500 max-sm:bg-[#424b40] max-sm:h-44  px-0 fixed top-0 right-0 left-0 z-[1030] ${isScrolled ? 'transform -translate-y-[45px]' : ''}`}
       >
-        <div className=" h-[45px] xl:border-b border-b-[rgba(42,36,36,0.07)] lg:flex hidden items-center  flex-wrap -mt-[0rem] -mr-[0.375rem] -ml-[0.375rem] fadeIn ">
-          <div className="lg:flex-none lg:w-1/2 px-[3rem] text-left max-w-full mt-0 ">
-            <small className="text-left">
-              <FontAwesomeIcon icon={faMapMarkerAlt} className="me-2" />
+        <div className="  h-[45px] xl:border-b border-b-[rgba(42,36,36,0.07)] lg:flex hidden items-center  flex-wrap -mt-[0rem] -mr-[0.375rem] -ml-[0.375rem]  ">
+          <div className="lg:flex-none  lg:w-1/2 px-[3rem] flex text-left max-w-full mt-0 ">
+            <small className="text-left flex">
+              <MapPin className=" mr-1 size-4" />
               123 Street, New York, USA
             </small>
-            <small className="ms-4">
-              <FontAwesomeIcon icon={faEnvelope} className="me-2" />
+            <small className="ms-4 flex ">
+              <Mail className=" mr-1  size-4" />
               info@example.com
             </small>
           </div>
-          <div className="lg:flex-none lg:w-1/2 px-5 text-end">
+          <div className="lg:flex-none flex lg:w-1/2 px-5 justify-end text-end">
             <small>Follow us:</small>
             <a className="text-[#555]  ms-3" href="/">
-              <FontAwesomeIcon icon={faFacebook} />
+              <Facebook />
             </a>
             <a className="text-[#555]  ms-3" href="/">
-              <FontAwesomeIcon icon={faTwitter} />
+              <Twitter />
             </a>
             <a className="text-[#555]  ms-3" href="/">
-              <FontAwesomeIcon icon={faLinkedin} />
+              <Linkedin />
             </a>
             <a className="text-[#555] ms-3" href="/">
-              <FontAwesomeIcon icon={faInstagram} />
+              <Instagram />
             </a>
           </div>
         </div>
@@ -70,7 +65,7 @@ const Headder = () => {
             </a>
             <div className="flex justify-center items-center">
               <div className="bg-[#3cb815] text-white w-fit   rounded-xl flex-nowrap flex justify-center ml-7 items-center   py-2 px-4">
-                <FontAwesomeIcon icon={faSearch} className="me-2" />
+                <Search className="me-2" />
                 <input
                   type="text"
                   className="bg-transparent focus:outline-none w-[40vw] max-sm:w-full   focus:bg-[#509018] bg-white pl-4 rounded-md"
@@ -80,10 +75,10 @@ const Headder = () => {
 
             <div className="gap-2 sm:flex hidden items-center   ">
               <button className="bg-[#3cb815] text-white  flex flex-row rounded-xl p-2   ">
-                <FontAwesomeIcon icon={faBell} className=" size-[20px] " />
+                <Bell />
               </button>
               <button className="bg-[#3cb815] text-white flex flex-row  rounded-xl  p-2  ">
-                <FontAwesomeIcon icon={faUser} className=" size-[20px] " />
+                <User />
               </button>
             </div>
           </div>

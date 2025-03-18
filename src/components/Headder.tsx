@@ -27,43 +27,43 @@ const Headder = () => {
   return (
     <>
       <div
-        className={`mx-auto transition duratioon-500 max-sm:bg-[#424b40] max-sm:h-44  px-0 fixed top-0 right-0 left-0 z-[1030] ${isScrolled ? 'transform -translate-y-[45px]' : ''}`}
+        className={`mx-auto transition duratioon-500 max-sm:bg-[#424b40] max-sm:h-44  px-0 fixed top-0 right-0 left-0 z-[1030] ${isScrolled ? 'sm:transform sm:-translate-y-[45px]' : ''}`}
       >
         <div className="  h-[45px] xl:border-b border-b-[rgba(42,36,36,0.07)] lg:flex hidden items-center  flex-wrap -mt-[0rem] -mr-[0.375rem] -ml-[0.375rem]  ">
           <div className="lg:flex-none  lg:w-1/2 px-[3rem] flex text-left max-w-full mt-0 ">
-            <small className="text-left flex">
-              <MapPin className=" mr-1 size-4" />
+            <small className="flex text-left">
+              <MapPin className="mr-1 size-4" />
               123 Street, New York, USA
             </small>
-            <small className="ms-4 flex ">
-              <Mail className=" mr-1  size-4" />
+            <small className="flex ms-4 ">
+              <Mail className="mr-1 size-4" />
               info@example.com
             </small>
           </div>
-          <div className="lg:flex-none flex lg:w-1/2 px-5 justify-end text-end">
+          <div className="flex justify-end gap-2 px-5 lg:flex-none lg:w-1/2 text-end">
             <small>Follow us:</small>
-            <a className="text-[#555]  ms-3" href="/">
-              <Facebook />
+            <a className="text-[#555] " href="/">
+              <Facebook className="size-5" />
             </a>
-            <a className="text-[#555]  ms-3" href="/">
-              <Twitter />
+            <a className="text-[#555]  " href="/">
+              <Twitter className="size-5" />
             </a>
-            <a className="text-[#555]  ms-3" href="/">
-              <Linkedin />
+            <a className="text-[#555]  " href="/">
+              <Linkedin className="size-5" />
             </a>
-            <a className="text-[#555] ms-3" href="/">
-              <Instagram />
+            <a className="text-[#555] " href="/">
+              <Instagram className="size-5" />
             </a>
           </div>
         </div>
         <div>
-          <div className="flex  max-sm:flex-col  justify-between w-full overflow-auto p-4 lg:px-6">
+          <div className="flex justify-between w-full p-4 overflow-auto max-sm:flex-col lg:px-6">
             <a className="text-[#555]  ms-3" href="/">
               <h1 className="font-[700] text-[#3cb815]  text-[8vw] lg:text-[3vw] m-0">
                 F<span className="text-[#F65005]">oo</span>dy
               </h1>
             </a>
-            <div className="flex justify-center items-center">
+            <div className="flex items-center justify-center">
               <div className="bg-[#3cb815] text-white w-fit   rounded-xl flex-nowrap flex justify-center ml-7 items-center   py-2 px-4">
                 <Search className="me-2" />
                 <input
@@ -73,7 +73,7 @@ const Headder = () => {
               </div>
             </div>
 
-            <div className="gap-2 sm:flex hidden items-center   ">
+            <div className="items-center hidden gap-2 sm:flex ">
               <button className="bg-[#3cb815] text-white  flex flex-row rounded-xl p-2   ">
                 <Bell />
               </button>

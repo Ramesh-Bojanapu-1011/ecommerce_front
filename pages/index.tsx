@@ -1,8 +1,6 @@
-import Footer from "@/components/Footer";
-import Headder from "@/components/Headder";
 import { NextPage } from "next";
 import Head from "next/head";
-import Link from "next/link";
+
 import { Fragment } from "react";
 
 const metaTitle = "Random Name Generator - World of Names!";
@@ -31,14 +29,12 @@ const HomePage: NextPage = () => {
 
         <title>{metaTitle}</title>
       </Head>
-       
 
       <main>
         <div className="h-[100vh] justify-center items-center flex">
           <p>main page</p>
         </div>
       </main>
-       
     </Fragment>
   );
 };

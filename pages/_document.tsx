@@ -10,10 +10,8 @@ class MyDocument extends Document {
           <link rel="icon" href="/globe.svg" />
         </Head>
         <body>
-          <Headder />
           <Main />
           <NextScript />
-          <Footer />
         </body>
       </Html>
     );

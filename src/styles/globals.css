@@ -118,7 +118,3 @@
     @apply bg-background text-foreground;
   }
 }
-
-main {
-  @apply pt-20;
-}

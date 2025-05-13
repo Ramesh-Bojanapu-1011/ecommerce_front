@@ -3,7 +3,7 @@ import { Button } from "./ui/button";
 
 const Footer = () => {
   return (
-    <div className="">
+    <div className="flex justify-center items-center h-screen">
       <Button>Footer</Button>
     </div>
   );

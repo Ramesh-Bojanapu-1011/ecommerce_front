@@ -30,7 +30,7 @@ const HomePage: NextPage = () => {
       <Headder />
 
       <main>
-        <div className="  flex justify-center items-center h-screen ">
+        <div className="flex justify-center items-center h-screen ">
           <Link href={"/signin"}>SignInPage</Link>
         </div>
       </main>

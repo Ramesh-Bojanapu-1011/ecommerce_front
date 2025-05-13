@@ -1,10 +1,28 @@
+import React from "react";
+
 const Headder = () => {
+  const [isScrolled, setIsScrolled] = React.useState(false);
+  React.useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      setIsScrolled(scrollPosition > 45); // 45px is the height of the top div
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <>
       <div
-        className={`mx-auto transition duration-500 max-sm:bg-[#424b40] max-sm:h-44  px-0 fixed w-full`}
+        className={`mx-auto transition duratioon-500 max-sm:bg-[#424b40] max-sm:h-44  px-0 fixed top-0 right-0 left-0 z-[1030] ${
+          isScrolled ? "sm:transform sm:-translate-y-[45px]" : ""
+        }`}
       >
         <div>
+          <div className="w-screen bg-[#d1b6b6] max-sm:hidden">
+            <h1>jhghsg</h1>
+          </div>
           <div className="flex justify-between w-full p-4 overflow-auto max-sm:flex-col lg:px-6">
             <a className="text-[#555]  ms-3" href="/">
               <h1 className="font-[700] text-[#3cb815]  text-[8vw] lg:text-[3vw] m-0">
@@ -30,12 +48,19 @@ const Headder = () => {
                 <input
                   type="text"
                   className="bg-transparent focus:outline-none w-[40vw] max-sm:w-full   focus:bg-[#509018] pl-4 rounded-md"
+                  placeholder="Search..."
+                  title="Search"
                 />
               </div>
             </div>
 
             <div className="items-center hidden gap-2 sm:flex ">
-              <button className="bg-[#3cb815] text-white  flex flex-row rounded-xl p-2   ">
+              <button
+                type="submit"
+                className="bg-[#3cb815] text-white  flex flex-row rounded-xl p-2   "
+                title="Notifications"
+                aria-label="Notifications"
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width={24}
@@ -54,7 +79,12 @@ const Headder = () => {
                   </g>
                 </svg>
               </button>
-              <button className="bg-[#3cb815] text-white flex flex-row  rounded-xl  p-2  ">
+              <button
+                type="submit"
+                className="bg-[#3cb815] text-white flex flex-row  rounded-xl  p-2  "
+                title="Profile"
+                aria-label="Profile"
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width={24}

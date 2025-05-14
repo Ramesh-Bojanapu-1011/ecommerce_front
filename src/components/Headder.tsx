@@ -15,17 +15,45 @@ const Headder = () => {
   return (
     <div
       className={`mx-auto transition duratioon-500 max-sm:bg-[#424b40] max-sm:h-44  px-0 fixed top-0 right-0 left-0 z-[1030] ${
-        isScrolled ? "transform -translate-y-[45px]" : ""
+        isScrolled ? "sm:transform sm:-translate-y-[45px]" : ""
       }`}
     >
-      <div className=" h-[45px] xl:border-b border-b-[rgba(42,36,36,0.07)] lg:flex hidden items-center  flex-wrap -mt-[0rem] -mr-[0.375rem] -ml-[0.375rem] fadeIn ">
-        <div className="lg:flex-none lg:w-1/2 px-[3rem] text-left max-w-full mt-0 ">
-          <small className="text-left">
-            {/* <FontAwesomeIcon icon={faMapMarkerAlt} className="me-2" /> */}
+      <div className="h-[45px] xl:border-b border-b-[rgba(42,36,36,0.07)] lg:flex hidden items-center  flex-wrap -mt-[0rem] -mr-[0.375rem] -ml-[0.375rem] fadeIn ">
+        <div className="lg:flex-none lg:w-1/2 px-[3rem] flex text-left max-w-full mt-0 ">
+          <small className="text-left flex items-center ">
+            <svg
+              className="me-1"
+              xmlns="http://www.w3.org/2000/svg"
+              width="1em"
+              height="1em"
+              viewBox="0 0 24 24"
+            >
+              <g
+                fill="none"
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+              >
+                <circle cx={12} cy={10} r={3}></circle>
+                <path d="M12 2a8 8 0 0 0-8 8c0 1.892.402 3.13 1.5 4.5L12 22l6.5-7.5c1.098-1.37 1.5-2.608 1.5-4.5a8 8 0 0 0-8-8"></path>
+              </g>
+            </svg>
             123 Street, New York, USA
           </small>
-          <small className="ms-4">
-            {/* <FontAwesomeIcon icon={faEnvelope} className="me-2" /> */}
+          <small className="ms-4 flex items-center">
+            <svg
+              className="me-1"
+              xmlns="http://www.w3.org/2000/svg"
+              width="1.5em"
+              height="1.5em"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill="currentColor"
+                d="M19 7H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2m-9.684 7.316l1.602 1.4c.305.266.691.398 1.082.398s.777-.133 1.082-.398l1.602-1.4l-.037.037l3.646 3.646H5.707l3.646-3.646zM5 17.293V10.54l3.602 3.151zm10.398-3.602L19 10.54v6.75zM19 9v.21l-6.576 5.754a.68.68 0 0 1-.848 0L5 9.21V9z"
+              ></path>
+            </svg>
             info@example.com
           </small>
         </div>
@@ -119,10 +147,10 @@ const Headder = () => {
                     gradientTransform="matrix(0 -253.715 235.975 0 68 275.717)"
                     gradientUnits="userSpaceOnUse"
                   >
-                    <stop stop-color="#fd5" />
-                    <stop offset=".1" stop-color="#fd5" />
-                    <stop offset=".5" stop-color="#ff543e" />
-                    <stop offset="1" stop-color="#c837ab" />
+                    <stop stopColor="#fd5" />
+                    <stop offset=".1" stopColor="#fd5" />
+                    <stop offset=".5" stopColor="#ff543e" />
+                    <stop offset="1" stopColor="#c837ab" />
                   </radialGradient>
                   <radialGradient
                     id="skillIconsInstagram1"
@@ -132,9 +160,9 @@ const Headder = () => {
                     gradientTransform="matrix(22.25952 111.2061 -458.39518 91.75449 -42.881 18.441)"
                     gradientUnits="userSpaceOnUse"
                   >
-                    <stop stop-color="#3771c8" />
-                    <stop offset=".128" stop-color="#3771c8" />
-                    <stop offset="1" stop-color="#60f" stop-opacity="0" />
+                    <stop stopColor="#3771c8" />
+                    <stop offset=".128" stopColor="#3771c8" />
+                    <stop offset="1" stopColor="#60f" stopOpacity="0" />
                   </radialGradient>
                 </defs>
               </g>
@@ -151,7 +179,22 @@ const Headder = () => {
           </a>
           <div className="flex justify-center items-center">
             <div className="bg-[#3cb815] text-white w-fit   rounded-xl flex-nowrap flex justify-center ml-7 items-center   py-2 px-4">
-              {/* <FontAwesomeIcon icon={faSearch} className="me-2" /> */}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="1em"
+                height="1em"
+                className="me-2"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="none"
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="m21 21l-6-6m2-5a7 7 0 1 1-14 0a7 7 0 0 1 14 0"
+                ></path>
+              </svg>
               <input
                 type="text"
                 className="bg-transparent focus:outline-none w-[40vw] max-sm:w-full   focus:bg-[#509018] pl-4 rounded-md"

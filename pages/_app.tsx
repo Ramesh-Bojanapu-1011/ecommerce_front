@@ -1,4 +1,4 @@
-import { ThemeProvider } from '@/components/theme-provider';
+import { ThemeProvider } from '@/components/theme/theme-provider';
 import '../src/styles/globals.css';
 import type { AppProps } from 'next/app';
 import { Toaster } from '@/components/ui/sonner';

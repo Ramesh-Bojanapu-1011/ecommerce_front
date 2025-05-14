@@ -1,11 +1,9 @@
-import React from 'react'
+import React from 'react';
 
-type Props = {}
+type Props = {};
 
 const Headder = (props: Props) => {
-  return (
-    <div>Headder</div>
-  )
-}
+  return <div>Headder</div>;
+};
 
-export default Headder
+export default Headder;

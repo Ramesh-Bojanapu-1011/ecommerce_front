@@ -1,10 +1,10 @@
-import { NextPage } from "next";
-import Head from "next/head";
-import { Fragment } from "react";
+import { NextPage } from 'next';
+import Head from 'next/head';
+import { Fragment } from 'react';
 
-const metaTitle = "SignInPage";
+const metaTitle = 'SignInPage';
 const metaDescription =
-  "Generate random names for any purpose! Whether you need a name for a character, a pet, or anything else, our random name generator has you covered.";
+  'Generate random names for any purpose! Whether you need a name for a character, a pet, or anything else, our random name generator has you covered.';
 
 const SignInPage: NextPage = () => {
   return (
